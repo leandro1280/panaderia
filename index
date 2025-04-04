@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Espiga Dorada - Panadería Artesanal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome para iconos (botones, FAQ, etc.) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /*  chicos esto es una mala practica por simplicidad 
+    mia lo use todo en el html dado que a veces bootstrap no permite reflejar todo 
+    tranquilamente podriamos ponerlo en un .css externo  */
+    :root {
+      --bs-primary: #c47f5e;  
+      --bs-secondary: #795548; /* color secundario: un marrón profundo */
+    }
+    /* Padding para que el navbar fijo no tape el contenido */
+    body {
+      padding-top: 56px;
+    }
+    /* Negrita para el link activo del menú */
+    .navbar-nav .nav-link.active {
+      font-weight: bold;
+    }
+    /* Personalizamos la altura de las imágenes del carrusel */
+    .carousel-item img {
+      object-fit: cover;
+      height: 70vh;
+    }
+  </style>
+</head>
+<body>
+  <!-- INICIO: Navbar (barra de navegación superior fija) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid"> 
+      <!-- Marca o logo: Nombre de la panadería -->
+      <a class="navbar-brand" href="#">La Espiga Dorada</a> 
+      <!-- Botón responsive: se muestra en dispositivos chicos -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menú colapsable -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Lista de enlaces alineados a la derecha -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#products">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Galería</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- FIN: Navbar -->
+ 
+  <!-- INICIO: Portada con Carrusel -->
+  
+  <header id="inicio">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <!-- Indicadores del carrusel (puntitos) -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <!-- Contenedor de slides -->
+      <div class="carousel-inner">
+        <!-- Slide 1: Imagen de pan artesanal -->
+        <div class="carousel-item active">
+          <img src="https://res.cloudinary.com/dnd6qvjge/image/upload/v1743725762/bread-9464305_1280_bvioi7.jpg" 
+               class="d-block w-100" alt="Pan artesanal dorado">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="fw-bold">Pan tradicional, sabor único</h2>
+            <p>Recetas artesanales que pasan de generación en generación</p>
+          </div>
+        </div>
+        <!-- Slide 2: Imagen de medialunas/facturas -->
+        <div class="carousel-item">
+          <img src="https://res.cloudinary.com/dnd6qvjge/image/upload/v1743725762/bread-4077812_1280_nlzm6d.jpg" 
+               class="d-block w-100" alt="Medialunas recién horneadas">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="fw-bold">Dulzuras que alegran el día</h2>
+            <p>Facturas y delicias para acompañar tu cafecito de la tarde</p>
+          </div>
+        </div>
+        <!-- Slide 3: Imagen de variedad de panes -->
+        <div class="carousel-item">
+          <img src="https://res.cloudinary.com/dnd6qvjge/image/upload/v1743728306/bread-6889039_1280_f9wuoi.jpg" 
+               class="d-block w-100" alt="Variedad de panes artesanales">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="fw-bold">Calidad artesanal en cada bocado</h2>
+            <p>De la masa al horno, todo se hace con amor y dedicación</p>
+          </div>
+        </div>
+      </div>
+      <!-- Controles: Botones para navegar entre slides -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- FIN: Portada con Carrusel -->
+
+
+ 
+  <!-- INICIO: Sección "Quiénes Somos" -->
+
+  <section id="about" class="py-5">
+    <div class="container">
+      <!-- Título de la sección -->
+      <div class="row mb-4">
+        <div class="col text-center">
+          <h2>Quiénes Somos</h2>
+          <p class="text-muted">Una panadería de barrio con más de 30 años de tradición</p>
+        </div>
+      </div>
+      <!-- Contenido en dos columnas: texto e imagen -->
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h3>Historia y Pasión</h3>
+          <p>
+            Somos La Espiga Dorada, una panadería artesanal que arrancó en los 90s con un horno prestado y muchísima ilusión. 
+            Cada pan, cada factura y cada budín llevan el toque especial que solo se logra amasar con cariño.
+          </p>
+          <p>
+            Acá no solo vendemos pan; creamos momentos. Nos encanta cuando pasás a charlar y te llevás algo rico para el desayuno o la merienda. 
+            Es un lugar donde la tradición se mezcla con la modernidad.
+          </p>
+          <p>
+            Si todavía no nos conocés, ¡no esperés más! Vení, probá nuestros productos y sentite como en casa.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <!-- Imagen ilustrativa -->
+          <img src="https://res.cloudinary.com/dnd6qvjge/image/upload/v1743728249/bakery-1868396_1280_flmjhh.jpg" class="img-fluid rounded" alt="Panadero amasando pan">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIN: Sección "Quiénes Somos" -->
+
+
+  <!-- INICIO: Sección Productos Destacados -->
+  <section id="products" class="py-5 bg-light">
+    <div class="container">
+      <!-- Título y subtítulo -->
+      <div class="row mb-4">
+        <div class="col text-center">
+          <h2>Productos Destacados</h2>
+          <p class="text-muted">Probá nuestras delicias: pan, facturas, medialunas y más</p>
+        </div>
+      </div>
+      <!-- Tarjetas de productos en fila -->
+      <div class="row">
+        <!-- Producto 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="https://res.cloudinary.com/dnd6qvjge/image/upload/v1743725762/bread-4183225_1280_thttxt.jpg" 
+                 class="card-img-top" alt="Pan de Masa Madre" style="object-fit: cover; height: 200px;">
+            <div class="card-body">
+              <h5 class="card-title">
+                Pan de Masa Madre <span class="badge bg-success">Nuevo</span>
+              </h5>
+              <p class="card-text">
+                Fermentado durante 48 horas para lograr una miga suave y una corteza crujiente. Ideal para acompañar con queso o mermelada.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="https://res.cloudinary.com/dnd6qvjge/image/upload/v1743725762/bread-9464305_1280_bvioi7.jpg" 
+                 class="card-img-top" alt="Pan de Campo" style="object-fit: cover; height: 200px;">
+            <div class="card-body">
+              <h5 class="card-title">
+                Pan de Campo <span class="badge bg-secondary">Clásico</span>
+              </h5>
+              <p class="card-text">
+                Hecho con harina seleccionada y horneado en horno de barro. Un sabor tradicional que te transporta a los viejos tiempos.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Producto 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="https://res.cloudinary.com/dnd6qvjge/image/upload/v1743725762/bread-4077812_1280_nlzm6d.jpg" 
+                 class="card-img-top" alt="Medialunas de Manteca" style="object-fit: cover; height: 200px;">
+            <div class="card-body">
+              <h5 class="card-title">
+                Medialunas de Manteca <span class="badge bg-warning text-dark">Favoritas</span>
+              </h5>
+              <p class="card-text">
+                Dulces, hojaldradas y con ese toque mantecoso que hacen de cada bocado una experiencia única.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- FIN: Sección Productos Destacados -->
+ 
+
+ 
+  <!-- INICIO: Sección Galería -->
+
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col text-center">
+          <h2>Galería</h2>
+          <p class="text-muted">Mirá algunos momentos capturados en nuestro horno y en la panadería</p>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Imagen 1 -->
+        <div class="col-md-4 mb-4">
+          <img src="https://res.cloudinary.com/dnd6qvjge/image/upload/v1743725762/bread-4183225_1280_thttxt.jpg" 
+               class="img-fluid rounded shadow-sm" alt="Detalle de la miga de pan">
+        </div>
+        <!-- Imagen 2 -->
+        <div class="col-md-4 mb-4">
+          <img src="https://res.cloudinary.com/dnd6qvjge/image/upload/v1743728249/bakery-1868396_1280_flmjhh.jpg" 
+               class="img-fluid rounded shadow-sm" alt="Panadero trabajando la masa">
+        </div>
+        <!-- Imagen 3 -->
+        <div class="col-md-4 mb-4">
+          <img src="https://res.cloudinary.com/dnd6qvjge/image/upload/v1743725762/bread-4077812_1280_nlzm6d.jpg" 
+               class="img-fluid rounded shadow-sm" alt="Bandeja de medialunas espolvoreadas">
+        </div>
+        <!-- Imagen 4 -->
+        <div class="col-md-4 mb-4">
+          <img src="https://res.cloudinary.com/dnd6qvjge/image/upload/v1743728306/bakery-1868396_1280_lerfiz.jpg" 
+               class="img-fluid rounded shadow-sm" alt="Detalle de ingredientes y masa en preparación">
+        </div>
+        <!-- Imagen 5 -->
+        <div class="col-md-4 mb-4">
+          <img src="https://res.cloudinary.com/dnd6qvjge/image/upload/v1743725762/bread-9464305_1280_bvioi7.jpg" 
+               class="img-fluid rounded shadow-sm" alt="Pan artesanal dorado y crujiente">
+        </div>
+        <!-- Imagen 6 -->
+        <div class="col-md-4 mb-4">
+          <img src="https://res.cloudinary.com/dnd6qvjge/image/upload/v1743728306/bread-6889039_1280_f9wuoi.jpg" 
+               class="img-fluid rounded shadow-sm" alt="Variedad de panes con semillas y frutas">
+        </div>
+      </div>
+    </div>
+  </section>
+  <a href="https://wa.me/1234567890" class="position-fixed bottom-0 end-0 m-3"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:50px; height:50px;"></a>
+
+  <!-- FIN: Sección Galería -->
+
+  <!-- INICIO: Sección Testimonios -->
+  <section id="testimonials" class="py-5 bg-light">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col text-center">
+          <h2>Testimonios</h2>
+          <p class="text-muted">Lo que dicen nuestros clientes y vecinos</p>
+        </div>
+      </div>
+      <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Testimonio 1 -->
+          <div class="carousel-item active">
+            <figure class="text-center">
+              <blockquote class="blockquote">
+                <p>"El pan de La Espiga Dorada es una delicia. Siempre que paso por el barrio, compro un par de unidades para el desayuno."</p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Lucía, clienta fiel del barrio
+              </figcaption>
+            </figure>
+          </div>
+          <!-- Testimonio 2 -->
+          <div class="carousel-item">
+            <figure class="text-center">
+              <blockquote class="blockquote">
+                <p>"Las medialunas me recuerdan a la infancia, un sabor único que no encuentro en ningún otro lado. ¡Recomendado al 100%!"</p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Marcos, vecino y amante del buen pan
+              </figcaption>
+            </figure>
+          </div>
+          <!-- Testimonio 3 -->
+          <div class="carousel-item">
+            <figure class="text-center">
+              <blockquote class="blockquote">
+                <p>"Cada visita a La Espiga Dorada es una experiencia. El ambiente, el aroma, y sobre todo, el sabor del pan te hacen volver siempre."</p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Carla, fanática de la panadería artesanal
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <!-- Controles del carrusel de testimonios -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIN: Sección Testimonios -->
+
+
+
+  <!-- INICIO: Sección FAQ (Preguntas Frecuentes) con Acordeón -->
+
+  <section id="faq" class="py-5">
+    <div class="container">
+      <!-- Título de FAQ -->
+      <div class="row mb-4">
+        <div class="col text-center">
+          <h2>Preguntas Frecuentes</h2>
+          <p class="text-muted">Consultá las dudas más comunes sobre nuestros productos y servicio</p>
+        </div>
+      </div>
+      <!-- Acordeón para FAQ -->
+      <div class="accordion" id="accordionFAQ">
+        <!-- FAQ 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq1-heading">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+              ¿Hacen envíos a domicilio?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              Sí, si vivís cerca del barrio te llevamos el pedido sin drama. Y si estás un poco más lejos, podés pedir a través de apps de delivery.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq2-heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+              ¿Tienen productos sin gluten o integrales?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              Estamos trabajando en ello. Por ahora, la mayoría de nuestras recetas son tradicionales, pero pronto incorporaremos opciones integrales y sin gluten para quienes lo necesiten.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq3-heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+              ¿A qué hora sale el pan del horno?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              Abrimos a las 7:30 am con los primeros panes calentitos y hacemos otro horneado a las 5:00 pm para la tarde. ¡Siempre hay pan fresco!
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq4-heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+              ¿Aceptan tarjetas y otros medios de pago?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              Aceptamos efectivo, tarjetas y pagos a través de MercadoPago o transferencia. ¡No queremos que nadie se quede sin probar nuestras delicias!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- FIN: Sección FAQ -->
+ 
+
+ 
+  <!-- INICIO: Sección Contacto & Ubicación -->
+
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <!-- Título de la sección -->
+      <div class="row mb-4">
+        <div class="col text-center">
+          <h2>Contacto & Ubicación</h2>
+          <p class="text-muted">Pasá a saludar o llamanos, ¡te esperamos con el horno siempre caliente!</p>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Información de contacto y horarios -->
+        <div class="col-md-6">
+          <h3>Horarios de Atención</h3>
+          <ul class="list-unstyled">
+            <li><strong>Lunes a Viernes:</strong> 7:30 am - 7:00 pm</li>
+            <li><strong>Sábados:</strong> 8:00 am - 2:00 pm</li>
+            <li><strong>Domingos:</strong> Cerrado</li>
+          </ul>
+          <h3>Teléfono</h3>
+          <p>
+            <a href="tel:+5492211234567" class="text-decoration-none">0221 123-4567</a>
+            <small class="text-muted">(hacé clic para llamar)</small>
+          </p>
+          <h3>WhatsApp</h3>
+          <p>
+            <a href="https://wa.me/5492211234567" target="_blank" class="btn btn-success">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <small class="text-muted">Mensaje directo</small>
+          </p>
+          <h3>Dirección</h3>
+          <p>Calle 12 #345, La Plata, Buenos Aires, Argentina</p>
+          <p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Calle+12+345+La+Plata+Buenos+Aires" target="_blank">
+              Ver en Google Maps
+            </a>
+          </p>
+        </div>
+        <!-- Mapa de ubicación -->
+        <div class="col-md-6">
+          <div class="ratio ratio-4x3">
+            <iframe class="rounded" src="https://www.google.com/maps?q=Calle+12+345+La+Plata+Buenos+Aires&output=embed" style="border:0;" allowfullscreen="" loading="lazy" title="Mapa de la panadería"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIN: Sección Contacto & Ubicación -->
+
+
+ 
+  <!-- INICIO: Footer -->
+
+  <footer class="bg-dark text-light text-center py-3">
+    <div class="container">
+      <p class="mb-0">
+        &copy; 2025 La Espiga Dorada. Todos los derechos reservados. 
+        Sitio hecho con mucho cariño, harina y un toque de magia artesanal.
+      </p>
+    </div>
+  </footer>
+
+  <!-- FIN: Footer -->
+
+  <!-- Cargamos Bootstrap JS y sus dependencias (Popper)  para que todos los componentes funcionen -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+// console.log es para ver mensajes de consolo eso se lo voy a mostrar mañana en clase     
+    console.log("La Espiga Dorada - Sitio cargado correctamente.");
+  </script>
+</body>
+</html>
+
+
+
+<!-- col-md-6
+
+Es una clase del sistema de grillas de Bootstrap.
+
+Significa que en pantallas medianas (y más grandes) el elemento ocupará 6 de las 12 columnas disponibles, es decir, la mitad del ancho.
+
+En pantallas más chicas, el comportamiento se adapta (usualmente se apila).
+
+row mb-4
+
+row: Es la fila que contiene las columnas. Sirve para agrupar las columnas y alinearlas correctamente.
+
+mb-4: Es una utilidad de margen inferior ("margin-bottom") con un valor de 4 (según la escala de Bootstrap). Agrega espacio abajo del elemento.
+
+text-muted
+
+Es una clase que aplica un color de texto gris claro (o "muted") para que se vea menos llamativo. Ideal para textos secundarios o descripciones.
+
+fw-bold
+
+Significa font-weight bold. Le da un estilo de letra en negrita al texto.
+
+d-block w-100
+
+d-block: Cambia el elemento a un bloque (display: block), lo que significa que ocupa toda la línea y respeta márgenes y paddings.
+
+w-100: Le asigna un ancho del 100% al elemento.
+
+carousel-caption d-none d-md-block
+
+carousel-caption: Es una clase de Bootstrap usada dentro del carrusel para posicionar el contenido (títulos, párrafos, botones) sobre la imagen.
+
+d-none: Hace que el elemento no se muestre (display: none) en dispositivos pequeños.
+
+d-md-block: Lo muestra como bloque (display: block) en pantallas medianas y grandes.
+
+La combinación hace que el caption se oculte en móviles y se vea en pantallas más grandes.
+
+py-5
+
+Es una clase de utilidad que aplica padding vertical (arriba y abajo) con un valor de 5 según la escala de Bootstrap. Facilita agregar espacio interno al contenedor.
+
+card h-100
+
+card: Es el componente de Bootstrap para tarjetas. Le da un contorno, sombra, y estructura para mostrar información de forma ordenada y elegante.
+
+h-100: Es una utilidad que asigna una altura del 100% al elemento, haciendo que la tarjeta se ajuste al alto de su contenedor, muy útil para alinear varias tarjetas a la misma altura.
+
+blockquote
+
+Es una etiqueta HTML semántica (no exclusiva de Bootstrap) usada para mostrar citas o textos destacados.
+
+Bootstrap la estiliza automáticamente para que se vea bien en el contexto del diseño.
+
+blockquote-footer
+
+Es una clase de Bootstrap que se utiliza dentro de un <blockquote> para indicar la fuente o autor de la cita.
+
+Le da un estilo de texto en cursiva y un tamaño reducido, ideal para notas al pie de la cita. -->
